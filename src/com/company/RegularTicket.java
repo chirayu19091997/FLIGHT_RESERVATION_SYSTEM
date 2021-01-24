@@ -1,6 +1,6 @@
 package com.company;
 
-public class RegularTicket {
+public class RegularTicket extends Ticket{
     private String specialService;
 
     public String getSpecialService() {
@@ -11,7 +11,8 @@ public class RegularTicket {
         this.specialService = specialService;
     }
 
-    public RegularTicket(String specialService) {
+    public RegularTicket(String pnr, String from, String to, Flight flight, String arrivalDateTime, String departureDateTime, Passenger passenger, String seatNo, float price, boolean cancelled,String specialService) {
+        super(pnr, from, to, flight, arrivalDateTime, departureDateTime, passenger, seatNo, price, cancelled);
         this.specialService = specialService;
     }
 

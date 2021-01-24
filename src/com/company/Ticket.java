@@ -1,6 +1,6 @@
 package com.company;
 
-public class Ticket {
+public abstract class Ticket{
     private String pnr;
     private String from;
     private String to;
@@ -109,7 +109,7 @@ public class Ticket {
         return seatNo;
     }
     public int getFlightDuration(){
-        return 10;
+        return 0;
     }
     public void cancel(){
 

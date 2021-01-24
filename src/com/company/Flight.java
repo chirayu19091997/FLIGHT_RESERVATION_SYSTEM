@@ -45,7 +45,7 @@ public class Flight {
         this.bookedSeats = bookedSeats;
     }
     public String getFlightDetails() {
-        return flightNumber;
+        return flightNumber +" "+ airline +" "+ capacity +" "+ bookedSeats;
     }
     public boolean checkAvailability(){
         return true;
