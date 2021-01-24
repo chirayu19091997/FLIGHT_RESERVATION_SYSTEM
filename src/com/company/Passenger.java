@@ -49,6 +49,7 @@ public class Passenger {
         this.address = address;
     }
 
+    // METHOD GETPASSENGER COUNT
     public int getPassengerCount(){
         return idCounter;
     }

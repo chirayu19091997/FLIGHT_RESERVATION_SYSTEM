@@ -12,6 +12,7 @@ public abstract class Ticket{
     private float price;
     private boolean cancelled;
 
+    // GETTERS AND SETTERS
     public String getPnr() {
         return pnr;
     }
@@ -92,6 +93,7 @@ public abstract class Ticket{
         this.cancelled = cancelled;
     }
 
+    // CONSTRUCTOR
     public Ticket(String pnr, String from, String to, Flight flight, String arrivalDateTime, String departureDateTime, Passenger passenger, String seatNo, float price, boolean cancelled) {
         this.pnr = pnr;
         this.from = from;
@@ -105,14 +107,25 @@ public abstract class Ticket{
         this.cancelled = cancelled;
 
     }
-    public String checkStatus(){
-        return seatNo;
+
+    // METHOD CANCEL
+    public void cancel(){
+        cancelled = true;
     }
+
+    // METHOD CHECKSTATUS
+    public String checkStatus(){
+        if(cancelled==false)
+        return "Ticket is confirmed with PNR: "+pnr;
+        else{
+            return "Ticket is cancelled";
+        }
+    }
+
+    // METHOD FLIGHTDURATION
     public int getFlightDuration(){
         return 0;
     }
-    public void cancel(){
 
-    }
 }
 

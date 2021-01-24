@@ -5,6 +5,7 @@ public class Address {
     private String city;
     private String state;
 
+    // GETTERS AND SETTERS
     public String getStreet() {
         return Street;
     }
@@ -29,15 +30,20 @@ public class Address {
         this.state = state;
     }
 
+    //CONSTRUCTOR
     public Address(String Street, String city, String state) {
         this.Street = Street;
         this.city = city;
         this.state = state;
     }
+
+    //METHOD GETADDRESSDETAILS
     public String getAddressDetails(){
         String addressdetails = Street + city + state ;
         return addressdetails;
     }
+
+    //METHOD UPDATEADDRESSDETAILS
     public void updateAddressDetails(String AddressDetail){
 
     }

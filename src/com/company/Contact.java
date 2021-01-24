@@ -5,6 +5,7 @@ public class Contact {
     private String phone;
     private String email;
 
+    // GETTERS AND SETTERS
     public String getName() {
         return name;
     }
@@ -29,15 +30,20 @@ public class Contact {
         this.email = email;
     }
 
+    //CONSTRUCTOR
     public Contact(String name, String phone, String email) {
         this.name = name;
         this.phone = phone;
         this.email = email;
     }
+
+    //METHOD GETCONTACT DETAILS
     public String getContactDetails(){
         return name + " " + phone +" " +email;
     }
-    public void updateContactDetails(String ContactDetail){
+
+    //METHOD UPDATECONTACTDETAILS
+    public void updateContactDetails(String contactDetails){
 
     }
 

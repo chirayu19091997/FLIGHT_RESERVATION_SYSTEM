@@ -6,6 +6,7 @@ public class Flight {
     private int capacity;
     private int bookedSeats;
 
+    // GETTERS AND SETTERS
     public String getFlightNumber() {
         return flightNumber;
     }
@@ -38,19 +39,31 @@ public class Flight {
         this.bookedSeats = bookedSeats;
     }
 
+    // CONSTRUCTOR
     public Flight(String flightNumber, String airline, int capacity, int bookedSeats) {
         this.flightNumber = flightNumber;
         this.airline = airline;
         this.capacity = capacity;
         this.bookedSeats = bookedSeats;
     }
+
+    // METHOD GETFLIGHTDETAILS
     public String getFlightDetails() {
         return flightNumber +" "+ airline +" "+ capacity +" "+ bookedSeats;
     }
-    public boolean checkAvailability(){
-        return true;
-    }
-    public void incrementBookingCounter(){
 
+    // METHOD CHECKAVAILABILITY
+    public boolean checkAvailability(){
+        if(bookedSeats==capacity)
+        return false;
+        else{
+            return true;
+        }
+    }
+
+    // INCREMENT BOOKING COUNTER
+    public void incrementBookingCounter(){
+        bookedSeats = bookedSeats+1;
+        capacity = capacity-1;
     }
 }
